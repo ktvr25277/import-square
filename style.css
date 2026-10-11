@@ -90,3 +90,5 @@ footer.site a{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
 
 h1,h2,h3{word-break:auto-phrase;text-wrap:balance}
+figure.pic{margin:20px 0 28px}
+figure.pic img{display:block;width:100%;height:auto;aspect-ratio:3/2;border-radius:4px}
