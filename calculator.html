@@ -14,75 +14,55 @@
 <meta property="og:url" content="https://import.bloomsfun.com/calculator.html">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4434695896885099" crossorigin="anonymous"></script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site"><div class="wrap">
-<a class="brand" href="https://import.bloomsfun.com/">海外通販の税金ノート<small>海外通販・個人輸入の税金を、公式資料で確かめて書くノート</small></a>
+<div class="airmail" aria-hidden="true"></div>
+<header class="site"><div class="wrap wide head">
+<a class="brand" href="https://import.bloomsfun.com/">海外通販の税金ノート</a>
 <nav class="cats" aria-label="メインメニュー"><a href="https://import.bloomsfun.com/index.html">トップ</a><a href="https://import.bloomsfun.com/basics.html">税金のしくみ</a><a href="https://import.bloomsfun.com/exemption.html">1万円以下は免税？</a><a href="https://import.bloomsfun.com/exceptions.html">対象外品目と税率表</a><a href="https://import.bloomsfun.com/examples.html">計算例</a><a href="https://import.bloomsfun.com/changes-2028.html">2028年の変更</a><a href="https://import.bloomsfun.com/calculator.html" aria-current="page">計算ツール</a></nav>
 </div></header>
 <main class="wrap">
 
+<section class="hero">
 <h1>海外通販の税金 計算ツール</h1>
-<p class="meta">最終確認日：2026年10月11日 ／ 2026年10月時点のルールによる概算</p>
-<p>商品代と品目を選ぶと、関税と消費税の目安を計算します。個人使用で、課税価格の合計が20万円以下の荷物が対象です。</p>
-<form class="calc" id="f" onsubmit="return false">
-<label for="price">商品代（円・海外小売価格）</label>
-<input id="price" type="number" inputmode="numeric" min="0" step="1" value="30000">
-<label for="cat">品目（簡易税率）</label>
-<select id="cat">
-<option value="20">20%：トマトソース、氷菓、毛皮製品 など</option>
-<option value="15">15%：コーヒー、茶（紅茶を除く） など</option>
-<option value="10">10%：衣類・付属品（メリヤス編みを除く） など</option>
-<option value="5" selected>5%：その他のもの</option>
-<option value="3">3%：プラスチック・ガラス・卑金属製品、玩具 など</option>
-<option value="0">無税：ゴム、紙、陶磁製品、鉄鋼製品 など</option>
+<p class="lead">商品代と品目から、関税と消費税の目安を出します。個人使用で、課税価格の合計が20万円以下の荷物が対象です。</p>
+<div class="meter-wrap"><div class="meter" id="meter">
+<h2>税額メーター</h2>
+<p class="fine" style="margin:0">商品代を動かすと、税金が変わるのが分かります。個人使用・2026年10月時点のルールです。</p>
+<div class="mrow">
+<div class="field"><label for="price">商品代（円）</label><input id="price" type="number" inputmode="numeric" min="0" max="500000" step="100" value="20000"></div>
+<div class="field"><label for="cat">品目</label><select id="cat">
+<option value="20">関税20%：トマトソース、氷菓、毛皮製品 など</option>
+<option value="15">関税15%：コーヒー、茶（紅茶を除く） など</option>
+<option value="10">関税10%：衣類・付属品（メリヤス編みを除く） など</option>
+<option value="5" selected>関税5%：その他のもの</option>
+<option value="3">関税3%：プラスチック・ガラス・卑金属製品、玩具 など</option>
+<option value="0">関税なし：ゴム、紙、陶磁製品、鉄鋼製品 など</option>
 <option value="x">対象外：革バッグ、ニット衣類、履物 など</option>
-</select>
-<div id="xbox" style="display:none">
-<label for="xrate">通常の関税率（%）※税関の案内で確認した率を入力</label>
-<input id="xrate" type="number" inputmode="decimal" min="0" step="0.1" value="10">
-</div>
-<button id="go" type="button">計算する</button>
-</form>
-<div id="result" aria-live="polite"></div>
-<div class="warn">酒類・たばこは計算できません。端数処理や品目の分類は、実際の通関で異なる場合があります。送料は課税価格に含めない前提で計算しています（<a href="basics.html">理由</a>）。</div>
-<script>
-(function(){
-  var cat=document.getElementById('cat'),xb=document.getElementById('xbox');
-  cat.addEventListener('change',function(){xb.style.display=cat.value==='x'?'block':'none';});
-  function yen(n){return Math.floor(n).toLocaleString('ja-JP')+'円';}
-  document.getElementById('go').addEventListener('click',function(){
-    var p=parseFloat(document.getElementById('price').value);
-    var out=document.getElementById('result');
-    if(!(p>=0)){out.innerHTML='<p>商品代を入力してください。</p>';return;}
-    var tv=p*0.6;
-    var isX=cat.value==='x';
-    var rate=isX?parseFloat(document.getElementById('xrate').value):parseFloat(cat.value);
-    var html='<div class="answer">';
-    if(tv>200000&&!isX){out.innerHTML='<div class="warn">課税価格が20万円を超えるため、簡易税率は使えません。通常の関税率で計算されます。</div>';return;}
-    html+='<p>課税価格：'+tv.toLocaleString('ja-JP',{maximumFractionDigits:1})+'円（商品代×0.6）</p>';
-    if(tv<=10000&&!isX){
-      html+='<p><b>税金の合計：0円</b>（課税価格が1万円以下のため、原則として関税・消費税は免除）</p></div>';
-      out.innerHTML=html;return;
-    }
-    if(isX&&!(rate>=0)){out.innerHTML='<div class="warn">通常の関税率を入力してください。</div>';return;}
-    var d=Math.floor(tv*rate/100);
-    var t=Math.floor((tv+d)*0.10);
-    html+='<p>関税：'+yen(d)+'（税率'+rate+'%）</p><p>消費税（地方消費税込み）：'+yen(t)+'</p><p><b>税金の合計：'+yen(d+t)+'</b></p>';
-    if(isX&&tv<=10000){html+='<p>この品目は、課税価格が1万円以下でも免税になりません。</p>';}
-    html+='</div>';
-    out.innerHTML=html;
-  });
-})();
-</script>
+</select></div></div>
+<div class="field" id="xbox" hidden style="margin-top:12px"><label for="xrate">通常の関税率（%）　税関の案内で確認した率を入れてください</label><input id="xrate" type="number" inputmode="decimal" min="0" step="0.1" value="10"></div>
+<div class="track"><input id="slide" type="range" min="0" max="60000" step="500" value="20000" aria-label="商品代のスライダー"></div>
+<div class="cutlabel" id="cutlabel"><span id="cutmark" style="left:27.78%">16,666円（ここまでは税金なし）</span></div>
+<div class="out"><div class="total" id="total" aria-live="polite">0<small>円</small></div><div class="verdict" id="verdict"></div></div>
+<div class="bar" id="bar" role="img" aria-label="商品代と税金の割合"><i class="b-item" id="bi"></i><i class="b-duty" id="bd"></i><i class="b-vat" id="bv"></i></div>
+<ul class="legend"><li class="l-item" id="li"></li><li class="l-duty" id="ld"></li><li class="l-vat" id="lv"></li></ul>
+<p class="fine" id="detail"></p>
+</div></div>
+</section>
+<div class="warn"><p><strong>この計算の前提</strong></p><ul><li>酒類・たばこは計算できません。</li><li>端数処理や品目の分類は、実際の通関で異なる場合があります。</li><li>送料は課税価格に含めない前提です（<a href="basics.html">理由</a>）。</li></ul></div>
 <h2>計算の根拠</h2>
 <ul class="src"><li><a href="https://www.customs.go.jp/zeikan/pamphlet/kojintsukan.pdf" rel="noopener">税関パンフレット「個人輸入の通関」</a>（確認日 2026年10月11日）</li><li><a href="https://www.customs.go.jp/tsukan/kanizeiritsu.htm" rel="noopener">税関「少額輸入貨物の簡易税率」</a>（確認日 2026年10月11日）</li><li><a href="https://www.nta.go.jp/taxes/shiraberu/taxanswer/shohi/6563.htm" rel="noopener">国税庁 タックスアンサー No.6563</a>（確認日 2026年10月11日）</li></ul>
 
 </main>
+<script src="calc.js"></script>
 <footer class="site"><div class="wrap">
 © 海外通販の税金ノート（bloomsfun.com）<br>
 <a href="https://import.bloomsfun.com/sources.html">出典と更新履歴</a> ・ <a href="https://import.bloomsfun.com/privacy.html">プライバシーポリシー</a> ・ <a href="https://import.bloomsfun.com/about.html">運営者情報</a> ・ <a href="https://import.bloomsfun.com/contact.html">お問い合わせ</a>
-</div></footer>
+</div>
+</footer>
 </body>
 </html>
