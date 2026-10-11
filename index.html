@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>海外通販の税金ノート｜海外通販の関税・消費税を公式資料で確かめる</title>
+<title>海外通販の税金ノート｜関税と消費税、結局いくらかかる？</title>
 <meta name="description" content="海外通販・個人輸入の関税と消費税を、税関・財務省・国税庁の公式資料で確認して解説。1万円以下の免税、0.6掛けの特例、2028年4月の変更まで。">
 <meta name="google-adsense-account" content="ca-pub-4434695896885099">
 <link rel="canonical" href="https://import.bloomsfun.com/">
 <meta property="og:site_name" content="海外通販の税金ノート">
-<meta property="og:title" content="海外通販の税金ノート｜海外通販の関税・消費税を公式資料で確かめる">
+<meta property="og:title" content="海外通販の税金ノート｜関税と消費税、結局いくらかかる？">
 <meta property="og:description" content="海外通販・個人輸入の関税と消費税を、税関・財務省・国税庁の公式資料で確認して解説。1万円以下の免税、0.6掛けの特例、2028年4月の変更まで。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://import.bloomsfun.com/">
@@ -23,28 +23,28 @@
 <div class="airmail" aria-hidden="true"></div>
 <header class="site"><div class="wrap wide head">
 <a class="brand" href="https://import.bloomsfun.com/">海外通販の税金ノート</a>
-<nav class="cats" aria-label="メインメニュー"><a href="https://import.bloomsfun.com/index.html" aria-current="page">トップ</a><a href="https://import.bloomsfun.com/basics.html">税金のしくみ</a><a href="https://import.bloomsfun.com/exemption.html">1万円以下は免税？</a><a href="https://import.bloomsfun.com/exceptions.html">対象外品目と税率表</a><a href="https://import.bloomsfun.com/examples.html">計算例</a><a href="https://import.bloomsfun.com/changes-2028.html">2028年の変更</a><a href="https://import.bloomsfun.com/calculator.html">計算ツール</a></nav>
+<nav class="cats" aria-label="メインメニュー"><a href="https://import.bloomsfun.com/index.html" aria-current="page">トップ</a><a href="https://import.bloomsfun.com/basics.html">計算の順番</a><a href="https://import.bloomsfun.com/exemption.html">1万円以下は税金ゼロ？</a><a href="https://import.bloomsfun.com/exceptions.html">免税にならない品物</a><a href="https://import.bloomsfun.com/examples.html">計算例</a><a href="https://import.bloomsfun.com/changes-2028.html">2028年の変更</a><a href="https://import.bloomsfun.com/calculator.html">計算ツール</a></nav>
 </div></header>
 <main class="wrap">
 
 <section class="hero">
-<h1>海外通販の税金は、<br>いくらかかる？</h1>
-<p class="lead">税関・財務省・国税庁の資料で確かめて、計算できるようにしました。最終確認日：2026年10月11日</p>
+<h1>海外通販、<br>結局いくら取られる？</h1>
+<p class="lead">金額を入れるだけで、関税と消費税がわかります。数字は税関・財務省・国税庁の資料で確認済みです（確認日：2026年10月11日）。</p>
 <div class="meter-wrap"><div class="meter" id="meter">
 <h2>税額メーター</h2>
-<p class="fine" style="margin:0">商品代を動かすと、税金が変わるのが分かります。個人使用・2026年10月時点のルールです。</p>
+<p class="fine" style="margin:0">商品代を動かすと、税金の変わり方が見えます。自分用の買い物で、2026年10月時点のルールです。</p>
 <div class="mrow">
 <div class="field"><label for="price">商品代（円）</label><input id="price" type="number" inputmode="numeric" min="0" max="500000" step="100" value="20000"></div>
-<div class="field"><label for="cat">品目</label><select id="cat">
+<div class="field"><label for="cat">買うもの</label><select id="cat">
 <option value="20">関税20%：トマトソース、氷菓、毛皮製品 など</option>
 <option value="15">関税15%：コーヒー、茶（紅茶を除く） など</option>
 <option value="10">関税10%：衣類・付属品（メリヤス編みを除く） など</option>
 <option value="5" selected>関税5%：その他のもの</option>
 <option value="3">関税3%：プラスチック・ガラス・卑金属製品、玩具 など</option>
 <option value="0">関税なし：ゴム、紙、陶磁製品、鉄鋼製品 など</option>
-<option value="x">対象外：革バッグ、ニット衣類、履物 など</option>
+<option value="x">簡易税率の対象外：革バッグ、ニット、靴 など</option>
 </select></div></div>
-<div class="field" id="xbox" hidden style="margin-top:12px"><label for="xrate">通常の関税率（%）　税関の案内で確認した率を入れてください</label><input id="xrate" type="number" inputmode="decimal" min="0" step="0.1" value="10"></div>
+<div class="field" id="xbox" hidden style="margin-top:12px"><label for="xrate">ふつうの関税率（%）：税関の案内で調べた数字を入れてください</label><input id="xrate" type="number" inputmode="decimal" min="0" step="0.1" value="10"></div>
 <div class="track"><input id="slide" type="range" min="0" max="60000" step="500" value="20000" aria-label="商品代のスライダー"></div>
 <div class="cutlabel" id="cutlabel"><span id="cutmark" style="left:27.78%">16,666円（ここまでは税金なし）</span></div>
 <div class="out"><div class="total" id="total" aria-live="polite">0<small>円</small></div><div class="verdict" id="verdict"></div></div>
@@ -52,23 +52,23 @@
 <ul class="legend"><li class="l-item" id="li"></li><li class="l-duty" id="ld"></li><li class="l-vat" id="lv"></li></ul>
 <p class="fine" id="detail"></p>
 </div></div>
-<div class="notice"><time datetime="2028-04-01">2028.4.1</time><p>個人使用の「商品代×0.6」の特例がなくなり、1万円以下の通販にも消費税がかかるようになります。2026年10月のいまは、まだ従来のルールです。<a href="changes-2028.html">確認した資料を見る</a></p></div>
+<div class="notice"><time datetime="2028-04-01">2028.4.1</time><p>自分用の買い物に使える「商品代×0.6」の特例がなくなり、1万円以下の通販にも消費税がかかるようになります。いまはまだ今までのルールのままです。<a href="changes-2028.html">根拠の資料を見る</a></p></div>
 </section>
 <h2>記事</h2>
 <ul class="list">
-<li><a href="exemption.html"><strong>1万円以下は本当に免税？</strong><span>「16,666円」の意味と、いまのルール</span><time>税関</time></a></li>
-<li><a href="changes-2028.html"><strong>2028年4月に何が変わる？</strong><span>法律の附則で施行日を確かめました</span><time>財務省</time></a></li>
-<li><a href="examples.html"><strong>計算例：総額はいくら？</strong><span>6つのケースを手計算で確認</span><time>計算</time></a></li>
-<li><a href="basics.html"><strong>関税と消費税のしくみ</strong><span>計算の順番と、よくある勘違い</span><time>国税庁</time></a></li>
-<li><a href="exceptions.html"><strong>免税にならない品目と税率表</strong><span>革製品・ニット・履物など</span><time>税関</time></a></li>
+<li><a href="exemption.html"><strong>1万円以下なら税金ゼロ？</strong><span>境目は商品代16,666円。その理由</span><time>税関</time></a></li>
+<li><a href="changes-2028.html"><strong>2028年4月、海外通販の税金が変わる</strong><span>いつからかは法律の附則で確認しました</span><time>財務省</time></a></li>
+<li><a href="examples.html"><strong>税金の計算例、6パターン</strong><span>服・電子機器・玩具など、手計算で確かめた例</span><time>計算</time></a></li>
+<li><a href="basics.html"><strong>関税と消費税、計算の順番</strong><span>よくある勘違いもまとめました</span><time>国税庁</time></a></li>
+<li><a href="exceptions.html"><strong>免税にならない品物と税率表</strong><span>革バッグ、ニット、靴など</span><time>税関</time></a></li>
 </ul>
-<h2>このサイトの作り方</h2>
+<h2>このサイトのルール</h2>
 <ul>
-<li>数字は、税関・財務省・国税庁のページで確認したものだけを載せます。各記事の末尾に出典と確認日があります。</li>
-<li>解説記事どうしで食い違っている点は、一次資料で確かめて、どちらが正しかったかを書きます。</li>
-<li>制度が変わったら記事を直し、<a href="sources.html">出典と更新履歴</a>に記録します。</li>
+<li>数字は、税関・財務省・国税庁のページで確認できたものだけ載せています。記事の最後に出典と確認日を付けています。</li>
+<li>ネットの解説記事で言っていることが食い違うときは、公式の資料に当たって、どちらが正しいかを書きます。</li>
+<li>制度が変わったら記事を直して、<a href="sources.html">出典と更新履歴</a>に残します。</li>
 </ul>
-<p class="src">この内容は一般的な情報提供です。個別の通関の判断は、税関の判断によります。</p>
+<p class="src">一般的な情報です。実際の税額は、税関の判断で決まります。</p>
 
 </main>
 <script src="calc.js"></script>

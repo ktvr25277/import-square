@@ -34,7 +34,7 @@
     $('lv').textContent = '消費税 ' + yen(vat);
     var d = '課税価格 ' + tv.toLocaleString('ja-JP', { maximumFractionDigits: 1 }) + '円（商品代×0.6）';
     if (free) d += ' ＝ 1万円以下なので、関税も消費税も原則かかりません。';
-    else if (isX && tv <= 10000) d += ' ＝ 1万円以下でも、この品目は免税になりません。';
+    else if (isX && tv <= 10000) d += ' ＝ 1万円以下でも、この品物は免税になりません。';
     else d += ' ／ 関税 ' + rate + '% ／ 消費税10%（地方消費税込み）';
     $('detail').textContent = d + '。端数処理は実際の通関と異なる場合があります。';
     var cutPct = isX ? 0 : (CUT / MAX * 100);

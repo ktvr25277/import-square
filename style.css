@@ -88,3 +88,5 @@ footer.site{margin-top:50px;background:var(--panel);border-top:1px solid var(--l
 footer.site .wrap{padding-top:22px;padding-bottom:36px;color:var(--muted);font-size:14px}
 footer.site a{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}}
+
+h1,h2,h3{word-break:auto-phrase;text-wrap:balance}
