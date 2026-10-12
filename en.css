@@ -1,0 +1,15 @@
+
+body{font-family:"Inter",-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.7;font-size:17px;font-feature-settings:normal}
+h1{letter-spacing:-.01em;line-height:1.2;font-weight:800}
+h2{letter-spacing:-.005em;line-height:1.3;font-weight:800;font-size:22px}
+h3{font-weight:700}
+.brand .t1{letter-spacing:0;font-weight:800;font-size:24px}
+.brand .t2{letter-spacing:.02em;font-size:12px}
+nav.cats{font-size:14px;font-weight:500}
+nav.cats a.lang{margin-left:auto;font-size:13px;border:1px solid var(--line);border-radius:3px;padding:4px 10px}
+.answer b.k{letter-spacing:0}
+.hero .lead{max-width:36em;font-size:18px}
+.list strong{font-weight:800;font-size:18px}
+.notice time{font-size:22px}
+.cutlabel span{font-size:12px}
+@media(max-width:560px){.brand .t1{font-size:20px}.brand .t2{font-size:10.5px;letter-spacing:0}}

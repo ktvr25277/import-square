@@ -19,6 +19,7 @@ header.site{background:var(--panel);border-bottom:1px solid var(--line)}
 nav.cats{display:flex;gap:2px 18px;flex-wrap:wrap;font-size:14.5px;font-weight:500}
 nav.cats a{color:var(--muted);text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
 nav.cats a:hover{color:var(--ink)}
+nav.cats a.lang{margin-left:auto;font-size:13px;border:1px solid var(--line);border-radius:3px;padding:4px 10px}
 nav.cats a[aria-current]{color:var(--blue);border-bottom-color:var(--red);font-weight:700}
 main{padding:34px 0 8px}
 h1{font-weight:900;font-size:clamp(27px,5.4vw,40px);line-height:1.35;margin:0 0 14px;letter-spacing:.01em}
