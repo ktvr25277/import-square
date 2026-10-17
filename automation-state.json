@@ -1,0 +1,16 @@
+{
+  "metrics_history": [
+    {
+      "date": "2026-10-17",
+      "scope": "import.bloomsfun.com",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "avg_position": null,
+      "pageviews": 67,
+      "revenue_jpy": 2,
+      "note": "pageviews/revenue are AdSense last-30-days; site launched 2026-10-11"
+    }
+  ],
+  "seo_changes": []
+}
