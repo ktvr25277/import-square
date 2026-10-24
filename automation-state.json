@@ -10,7 +10,17 @@
       "pageviews": 67,
       "revenue_jpy": 2,
       "note": "pageviews/revenue are AdSense last-30-days; site launched 2026-10-11"
+    },
+    {
+      "date": "2026-10-24",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "avg_position": null,
+      "pageviews": 69,
+      "revenue_jpy": 2
     }
   ],
-  "seo_changes": []
+  "seo_changes": [],
+  "last_run": "2026-10-24"
 }
