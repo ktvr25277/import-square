@@ -19,8 +19,17 @@
       "avg_position": null,
       "pageviews": 69,
       "revenue_jpy": 2
+    },
+    {
+      "date": "2026-11-07",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "avg_position": 5,
+      "pageviews": 71,
+      "revenue_jpy": 2
     }
   ],
   "seo_changes": [],
-  "last_run": "2026-10-24"
+  "last_run": "2026-11-07"
 }
