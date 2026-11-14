@@ -28,8 +28,25 @@
       "avg_position": 5,
       "pageviews": 71,
       "revenue_jpy": 2
+    },
+    {
+      "date": "2026-11-14",
+      "scope": "import.bloomsfun.com",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "avg_position": 5,
+      "pageviews": 5,
+      "revenue_jpy": 1,
+      "note": "SC 28d filtered to import.bloomsfun.com; AdSense site table 30d (import: 5 PV, JPY1). Earlier PV figures may have been all-site."
     }
   ],
   "seo_changes": [],
-  "last_run": "2026-11-07"
+  "last_run": "2026-11-14",
+  "fix_log": [
+    {
+      "date": "2026-11-14",
+      "note": "exceptions.html / en-exceptions.html: 3% row example toys->furniture to match customs table"
+    }
+  ]
 }
